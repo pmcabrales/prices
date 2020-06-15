@@ -1,4 +1,4 @@
-package com.kairosds.configuration;
+package com.kairosds.adapters.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

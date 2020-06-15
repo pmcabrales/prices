@@ -1,4 +1,4 @@
-package com.kairosds.controller;
+package com.kairosds.adapters.web;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PricesControllerIT {
+public class PriceListControllerIT {
 
     @Autowired
     protected MockMvc mockMvc;

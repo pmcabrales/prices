@@ -1,11 +1,11 @@
-package com.kairosds.model;
+package com.kairosds.adapters.persistence;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -13,35 +13,29 @@ import java.time.LocalDateTime;
 @Entity
 @ApiModel(description = "Entity for product prices over time")
 @Table(name = "Prices")
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-public class Price {
+@NoArgsConstructor
+public class PriceJpaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    private long priceId;
+    private @Getter long priceId;
 
     @ApiModelProperty(notes = "Store group foreign key (1 = ZARA)")
-    @Getter
-    private long brandId;
+    private @Getter long brandId;
     @ApiModelProperty(notes = "Date when the price starts to apply for the product")
-    @Getter
-    private LocalDateTime startDate;
+    private @Getter LocalDateTime startDate;
     @ApiModelProperty(notes = "Date when the price ends to apply for the product")
-    @Getter
-    private LocalDateTime endDate;
+    private @Getter LocalDateTime endDate;
     @ApiModelProperty(notes = "Applied fare id")
-    @Getter
-    private long priceList;
+    private @Getter long priceList;
     @ApiModelProperty(notes = "Product code id")
-    @Getter
-    private long productId;
+    private @Getter long productId;
     @ApiModelProperty(notes = "Tiebreaker. If two fares applies at the same time the one with more priority is selected (numeric)")
-    private int priority;
+    private @Getter int priority;
     @ApiModelProperty(notes = "Final price")
-    @Getter
-    private float price;
+    private @Getter float price;
     @ApiModelProperty(notes = "Currency ISO")
-    private String curr;
+    private @Getter String curr;
 }

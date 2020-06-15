@@ -1,6 +1,6 @@
-package com.kairosds.controller;
+package com.kairosds.adapters.web;
 
-import com.kairosds.model.Price;
+import com.kairosds.application.domain.Price;
 import io.swagger.annotations.*;
 
 @Api
